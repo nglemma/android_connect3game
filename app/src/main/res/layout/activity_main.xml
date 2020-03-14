@@ -15,6 +15,7 @@
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
         android:background="@drawable/board"
+        app:orientation="horizontal"
         app:columnCount="3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,20 +24,84 @@
         app:rowCount="3" >
 
         <ImageView
-            android:id="@+id/imageView12"
+            android:id="@+id/imagered1"
             android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_height="100dp"
+            android:layout_margin="15dp"
             app:layout_column="0"
             app:layout_row="0"
             app:srcCompat="@drawable/red" />
 
         <ImageView
-            android:id="@+id/imageView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/imagered"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="15dp"
+            app:layout_column="1"
+            app:layout_row="0"
+            app:srcCompat="@drawable/red" />
+
+        <ImageView
+            android:id="@+id/imagered2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="15dp"
             app:layout_column="2"
             app:layout_row="0"
+            app:srcCompat="@drawable/red" />
+
+        <ImageView
+            android:id="@+id/imagered3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="15dp"
+            app:layout_column="0"
+            app:layout_row="1"
+            app:srcCompat="@drawable/red" />
+
+        <ImageView
+            android:id="@+id/imagered4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="15dp"
+            app:layout_column="1"
+            app:layout_row="1"
+            app:srcCompat="@drawable/red" />
+
+        <ImageView
+            android:id="@+id/imagered5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="15dp"
+            app:layout_column="2"
+            app:layout_row="1"
+            app:srcCompat="@drawable/red" />
+
+        <ImageView
+            android:id="@+id/imagered6"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="15dp"
+            app:layout_column="0"
+            app:layout_row="2"
+            app:srcCompat="@drawable/red" />
+
+        <ImageView
+            android:id="@+id/imagered7"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="15dp"
+            app:layout_column="1"
+            app:layout_row="2"
+            app:srcCompat="@drawable/red" />
+
+        <ImageView
+            android:id="@+id/imagered8"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="15dp"
+            app:layout_column="2"
+            app:layout_row="2"
             app:srcCompat="@drawable/red" />
 
     </androidx.gridlayout.widget.GridLayout>
