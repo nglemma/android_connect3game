@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -56,14 +57,38 @@ public class MainActivity extends AppCompatActivity
                         winner = "Red";
                         }
 
-                    TextView winnereditText = findViewById(R.id.winnerTextView);
+                    TextView winnerTextView = findViewById(R.id.winnerTextView);
                     Button playagainbutton = findViewById(R.id.playagainbutton);
-                    winnereditText.setText(winner + " has won!");
+                    winnerTextView.setText(winner + " has won!");
                     playagainbutton.setVisibility(View.VISIBLE);
-                    winnereditText.setVisibility(View.VISIBLE);
+                    winnerTextView.setVisibility(View.VISIBLE);
                 }
             }
         }
+    }
+
+    public void playagain(View view)
+    {
+        Button playagainbutton = findViewById(R.id.playagainbutton);
+        TextView winnerTextView = findViewById(R.id.winnerTextView);
+        playagainbutton.setVisibility(View.INVISIBLE);
+        winnerTextView.setVisibility(View.INVISIBLE);
+
+        GridLayout gridlay = findViewById(R.id.gridlay);
+
+        for(int i=0; i<gridlay.getChildCount(); i++)
+        {
+            ImageView counter = (ImageView) gridlay.getChildAt(i);
+            counter.setImageDrawable(null);
+        }
+
+        for(int i=0; i<gamestate.length;i++)
+        {
+            gamestate [i]=2;
+        }
+
+        activeplayer=0;
+        gameactive=true;
     }
     @Override
     protected void onCreate(Bundle savedInstanceState)
