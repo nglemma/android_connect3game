@@ -1,14 +1,13 @@
 package com.example.connect3;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.GridLayout;
+//import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import androidx.gridlayout.widget.GridLayout;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -74,17 +73,21 @@ public class MainActivity extends AppCompatActivity
         playagainbutton.setVisibility(View.INVISIBLE);
         winnerTextView.setVisibility(View.INVISIBLE);
 
-        GridLayout gridlay = findViewById(R.id.gridlay);
+        GridLayout gridlay =  findViewById(R.id.gridlay);
 
         for(int i=0; i<gridlay.getChildCount(); i++)
         {
             ImageView counter = (ImageView) gridlay.getChildAt(i);
-            counter.setImageDrawable(null);
+
+            if (counter.getDrawable()!=null)
+            {
+               counter.setImageDrawable(null);
+            }
         }
 
         for(int i=0; i<gamestate.length;i++)
         {
-            gamestate [i]=2;
+            gamestate[i]=2;
         }
 
         activeplayer=0;
